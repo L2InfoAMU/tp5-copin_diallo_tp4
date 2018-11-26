@@ -22,6 +22,12 @@ public class BruteRasterImage implements Image {
         Object[][] matrice = new Object[width][height];
     }
 
+    public void setPixelColor(Color color, int x, int y){
+        colors[x][y]=color;
+    }
+
+
+
     @Override
     public Color getPixelColor(int x, int y) {
         return colors[x][y];
