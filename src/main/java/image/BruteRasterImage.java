@@ -26,7 +26,9 @@ public class BruteRasterImage implements Image {
         colors[x][y]=color;
     }
 
-
+    public void setPixelsColor(Color[][] pixels){
+        colors[x][y]=pixels[x][y];
+    }
 
     @Override
     public Color getPixelColor(int x, int y) {
