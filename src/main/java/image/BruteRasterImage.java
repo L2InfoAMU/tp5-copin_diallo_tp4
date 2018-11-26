@@ -18,6 +18,10 @@ public class BruteRasterImage implements Image {
         this.colors[x][y] = colors[x][y];
     }
 
+    public void createRepresentation(){
+        Object[][] matrice = new Object[width][height];
+    }
+
     @Override
     public Color getPixelColor(int x, int y) {
         return colors[x][y];
