@@ -41,7 +41,12 @@ public class BruteRasterImage implements Image {
             }
         }
     }
+
+    protected int setWidth(int width){
+        this.width=width;
+    }
     
+
 
     @Override
     public Color getPixelColor(int x, int y) {
