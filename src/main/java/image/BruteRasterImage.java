@@ -9,13 +9,13 @@ public class BruteRasterImage implements Image {
     private int x, y;
 
     public BruteRasterImage(Color color, int width, int height) {
-        this.width = width;
-        this.height = height;
-        this.color = color;
+        setHeight(height);
+        setWidth(width);
+        setPixelColor(color, x, y);
     }
 
     public BruteRasterImage(Color[][] colors) {
-        this.colors[x][y] = colors[x][y];
+        setPixelsColor(colors[x][y]);
     }
 
     public void createRepresentation(){
@@ -44,8 +44,13 @@ public class BruteRasterImage implements Image {
 
     protected int setWidth(int width){
         this.width=width;
+        return this.width;
     }
-    
+
+    protected int setHeight(int height){
+        this.height=height;
+        return this.height;
+    }
 
 
     @Override
